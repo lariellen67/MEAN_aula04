@@ -12,4 +12,14 @@ angular.module('ifsp', ['ngRoute']).config(function ($routeProvider) {
   });
 
   $routeProvider.otherwise({ redirectTo: '/contatos' });
+
+  $routeProvider.when('/cursos', {
+    templateUrl: './partials/cursos.html',
+    controller: 'CursosController',
+  });
+
+  $routeProvider.when('/cursos/:cursoId', {
+    templateUrl: 'partials/curso.html',
+    controller: 'CursoController',
+  });
 });
